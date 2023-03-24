@@ -7,7 +7,7 @@
     </ul>
     <h3 v-if="props.meaning.antonyms.length > 0" class="antonyms">
       <span>Antonyms</span>
-      <span v-for="ant in props.meaning.antonyms" :key="syn" class="antonym"><a href="#">{{ ant }}</a></span>
+      <span v-for="ant in props.meaning.antonyms" :key="ant" class="antonym"><button @click="handleClick(syn)">{{ ant }}</button></span>
     </h3>
     <h3 v-if="props.meaning.synonyms.length > 0" class="synonyms">
       <span>Synonyms</span>
